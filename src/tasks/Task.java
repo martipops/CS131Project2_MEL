@@ -19,7 +19,7 @@ class Task implements Priority, Comparable<Task> {
      * The status of a task can be new, in progress, or complete.
      */
     public enum Status {
-        NEW, IN_PROGRESS, COMPLETE
+        NOT_STARTED, IN_PROGRESS, COMPLETE
     };
 
     private String name;
@@ -34,7 +34,7 @@ class Task implements Priority, Comparable<Task> {
      */
     public Task(String name) {
         this.name = name;
-        this.status = Status.NEW;
+        this.status = Status.NOT_STARTED;
         this.priority = MED_PRIORITY; // default to medium
     }
 
